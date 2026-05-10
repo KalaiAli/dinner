@@ -167,7 +167,7 @@ body::-webkit-scrollbar {
 
 .recipe-info {
   position: absolute;
-  bottom: 40px;
+  bottom: 10px;
   left: 40px;
 
   z-index: 2;

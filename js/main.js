@@ -1254,21 +1254,21 @@ function displayProducts(index) {
           <i class="fa-solid fa-star txt-gold"></i>${tmpArray[index].rating}
         </span>
       </div>
-      <div class="recipe-info bg-white mx-4 px-3 py-3 w-75 rounded-4">
+      <div class="recipe-info bg-white mx-4 px-3 py-2 w-75 rounded-4">
         <div class="row g-4">
-          <div class="col-md-4 d-flex flex-column align-items-center">
+          <div class="col-4  d-flex flex-column align-items-center">
             <i class="fa-solid fa-clock txt-orange fs-3"></i>
             <small class="mt-2">${tmpArray[index].preparation.prepTime}</small>
             <h6 class="fw-bold">15 min</h6>
           </div>
 
-          <div class="col-md-4 d-flex flex-column align-items-center">
+          <div class="col-4 d-flex flex-column align-items-center">
             <i class="fa-solid fa-fire-burner txt-red-500 fs-3"></i>
             <small class="mt-2">Cook</small>
             <h6 class="fw-bold">${tmpArray[index].preparation.cookTime}</h6>
           </div>
 
-          <div class="col-md-4 d-flex flex-column align-items-center">
+          <div class="col-4  d-flex flex-column align-items-center">
             <i class="fa-solid fa-users txt-blue-500 fs-3"></i>
             <small class="mt-2">Servings</small>
             <h6 class="fw-bold">${tmpArray[index].preparation.servings}</h6>
