@@ -1168,7 +1168,25 @@ localStorage.setItem("dinner", JSON.stringify(dinner));
 // GET
 var dinnerArray = JSON.parse(localStorage.getItem("dinner")) || [];
 
-var randomNumber = Math.floor(Math.random() * 19) + 1;
+var min = 0;
+var max = dinnerArray.length;
+
+// var randomNumber = Math.floor(Math.random() * 19) + 1;
+
+let lastNum;
+
+function getUniqueRandom(min, max) {
+  let nextNum;
+  do {
+    nextNum = Math.floor(Math.random() * (max - min + 1)) + min;
+  } while (nextNum === lastNum);
+  lastNum = nextNum;
+  return nextNum;
+}
+
+var randomNumber = getUniqueRandom(min, max);
+
+// console.log("number " + randomNumber);
 
 if (localStorage.getItem("dinner") !== null) {
   dinnerArray = JSON.parse(localStorage.getItem("dinner"));
@@ -1176,8 +1194,9 @@ if (localStorage.getItem("dinner") !== null) {
 
   displayProducts(0);
 }
+
 function SelectNumber() {
-  randomNumber = Math.floor(Math.random() * 19) + 1;
+  var randomNumber = getUniqueRandom(min, max);
 
   if (localStorage.getItem("dinner") !== null) {
     dinnerArray = JSON.parse(localStorage.getItem("dinner"));
@@ -1203,7 +1222,6 @@ function tips(arrayvar) {
 
      `;
   }
-  console.log(tipsVar);
 }
 
 function ingredient(arrayvar) {
